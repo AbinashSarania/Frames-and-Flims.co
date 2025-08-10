@@ -1,0 +1,68 @@
+/* Google Fonts import must be first */
+@import url('https://fonts.googleapis.com/css2?family=Dynalight&family=Monsieur+La+Doulaise&family=Tangerine:wght@400;700&display=swap');
+
+/* Tailwind import next */
+@import "tailwindcss";
+
+/* Your custom styles */
+@layer utilities {
+  /* Font utilities */
+  .font-monsieur {
+    font-family: 'Monsieur La Doulaise', cursive;
+  }
+
+  .font-tangerine {
+    font-family: 'Tangerine', cursive;
+  }
+
+  .font-dynalight {
+    font-family: 'Dynalight', cursive;
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Animation utilities */
+  .animate-fadeUp {
+    animation: fadeUp 1.2s ease-out both;
+  }
+
+  .animate-slideInRight {
+    animation: slideInRight 0.5s ease-in-out both;
+  }
+
+  .animate-slideInLeft {
+    animation: slideInLeft 0.5s ease-in-out both;
+  }
+}

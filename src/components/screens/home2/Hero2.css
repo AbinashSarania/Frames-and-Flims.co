@@ -1,0 +1,48 @@
+.tv-noise-chaos {
+  mix-blend-mode: screen;
+  opacity: 0.25;
+  background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 2px 2px, 3px 3px, 1px 1px, 4px 4px;
+  animation: noise-chaos 0.2s steps(8) infinite;
+}
+
+@keyframes noise-chaos {
+  0% {
+    background-position: 0 0, 10px 10px, -5px 5px, 20px -10px;
+  }
+  25% {
+    background-position: 5px -5px, -8px 8px, 10px -10px, -15px 15px;
+  }
+  50% {
+    background-position: -10px 10px, 15px -15px, -20px 20px, 8px -8px;
+  }
+  75% {
+    background-position: 8px -8px, -12px 12px, 18px -18px, -5px 5px;
+  }
+  100% {
+    background-position: 0 0, 10px 10px, -5px 5px, 20px -10px;
+  }
+}
+
+@keyframes floatBreathe {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+.animate-float-breathe {
+  animation: floatBreathe 6s ease-in-out infinite;
+}
