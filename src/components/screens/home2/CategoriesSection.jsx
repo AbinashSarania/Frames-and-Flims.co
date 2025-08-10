@@ -3,7 +3,7 @@ import img1 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_31.jpg";
 import img2 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_51.jpg";
 import img3 from "../../../assets/Nitesh and Niyati/Nitesh_and_Niyati_25.jpg";
 import img4 from "../../../assets/Nitesh and Niyati/Nitesh_and_Niyati_21.jpg";
-import img5 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_26.jpg";
+import img5 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_26.JPG";
 import img6 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_47.jpg";
 import img7 from "../../../assets/Nitesh and Niyati/Nitesh_and_Niyati_15.jpg";
 import useInView from "../../hooks/useInView";

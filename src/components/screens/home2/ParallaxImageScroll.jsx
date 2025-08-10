@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import img1 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_33.jpg";
 import img2 from "../../../assets/Nitesh and Niyati/Nitesh_and_Niyati_25.jpg";
-import img3 from "../../../assets/Nitesh and Niyati/Nitesh_and_Niyati_27.jpg";
+import img3 from "../../../assets/Nitesh and Niyati/Nitesh_and_Niyati_27.JPG";
 import img4 from "../../../assets/Nitesh and Niyati/Nitesh_and_Niyati_15.jpg";
 import useInView from "../../hooks/useInView";
 
