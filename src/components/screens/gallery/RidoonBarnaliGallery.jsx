@@ -29,10 +29,10 @@ import img22 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_22.jpg"
 import img23 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_23.jpg";
 import img24 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_24.jpg";
 import img25 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_25.jpg";
-import img26 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_26.jpg";
-import img27 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_27.jpg";
-import img28 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_28.jpg";
-import img29 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_29.jpg";
+import img26 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_26.JPG";
+import img27 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_27.JPG";
+import img28 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_28.JPG";
+import img29 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_29.JPG";
 import img30 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_30.jpg";
 import img31 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_31.jpg";
 import img32 from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_32.jpg";
