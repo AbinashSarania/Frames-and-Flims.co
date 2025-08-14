@@ -29,7 +29,7 @@ export default function ImageScrollEffect() {
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center pointer-events-none px-4">
         <h1
           ref={headingRef}
-          className="font-monsieur text-5xl md:text-7xl font-thin leading-tight"
+          className="font-tangerine text-5xl md:text-7xl font-thin leading-tight"
         >
           Your love story in focus.
         </h1>
