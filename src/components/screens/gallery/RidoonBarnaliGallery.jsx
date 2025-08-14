@@ -131,7 +131,7 @@ const CouplesGallerySection = () => {
 
   return (
     <section className="bg-[#f4efdf] py-10 px-4 lg:px-20">
-      <h2 className="font-monsieur text-center text-6xl font-thin mb-8">
+      <h2 className="font-tangerine text-center text-6xl font-thin mb-8">
         Ridoon & Barnali
       </h2>
       <p className="text-center text-lg text-gray-600 mb-8">July 31, 2025</p>
