@@ -1,8 +1,61 @@
-import React from "react";
-import contactImage from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_31.jpg"; // Replace with your actual contact image
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import React, { useState } from "react";
+import contactImage from "../../../assets/Ridoon and Barnali/Ridoon_and_Barnali_31.jpg";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa";
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
+    time: "",
+    services: [],
+    message: ""
+  });
+
+  const servicesList = [
+    "Destination",
+    "Couples",
+    "Film",
+    "Video",
+    "Elopements",
+    "Engagements",
+    "Weddings",
+    "Others"
+  ];
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+
+    if (type === "checkbox") {
+      setFormData((prev) => {
+        if (checked) {
+          return { ...prev, services: [...prev.services, value] };
+        } else {
+          return { ...prev, services: prev.services.filter((s) => s !== value) };
+        }
+      });
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const whatsappNumber = "919876543210"; // Replace with your WhatsApp number (without +)
+    const message = `New Wedding Booking Inquiry:%0A
+Name: ${formData.name}%0A
+Email: ${formData.email}%0A
+Phone: ${formData.phone}%0A
+Date: ${formData.date}%0A
+Time: ${formData.time}%0A
+Services: ${formData.services.join(", ")}%0A
+Message: ${formData.message}`;
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
+  };
+
   return (
     <section className="flex flex-col p-10 py-20 md:flex-row bg-[#f4efdf] min-h-screen">
       {/* Image Section */}
@@ -19,28 +72,133 @@ const ContactUs = () => {
         <h5 className="text-sm tracking-wider uppercase text-gray-600 mb-2">
           I'd love to tell your story
         </h5>
-        <h2 className="text-3xl font-semibold mb-6">Contact Me.</h2>
+        <h2 className="text-3xl font-semibold mb-6">Book Your Wedding Session</h2>
         <p className="text-gray-700 mb-8">
-          I’m here to capture your most special moments. Whether it's a wedding,
-          engagement, or any other cherished event — let’s connect and make it
-          happen.
+          I’m here to capture your most special moments. Fill in your details and let's make it happen.
         </p>
 
-        {/* Contact Details */}
-        <div className="space-y-6">
-          <div className="flex items-start space-x-4">
-            <FaMapMarkerAlt className="text-[#8E6B3E] text-xl mt-1" />
-            <p className="text-gray-800">123 Wedding Lane, Dream City, India</p>
+        {/* Contact Form */}
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 focus:outline-none"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 focus:outline-none"
+            required
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 focus:outline-none"
+            required
+          />
+
+          {/* Date and Time */}
+          <div className="flex gap-4">
+            <input
+              type="date"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+              className="w-1/2 p-3 border border-gray-300 focus:outline-none"
+              required
+            />
+            <input
+              type="time"
+              name="time"
+              value={formData.time}
+              onChange={handleChange}
+              className="w-1/2 p-3 border border-gray-300 focus:outline-none"
+              required
+            />
           </div>
 
-          <div className="flex items-start space-x-4">
-            <FaPhoneAlt className="text-[#8E6B3E] text-xl mt-1" />
-            <p className="text-gray-800">+91 98765 43210</p>
+          {/* Services Checkboxes */}
+          <div>
+            <p className="mb-2 font-medium">Select Services:</p>
+            <div className="grid grid-cols-2 gap-2">
+              {servicesList.map((service, index) => (
+                <label key={index} className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    value={service}
+                    checked={formData.services.includes(service)}
+                    onChange={handleChange}
+                  />
+                  {service}
+                </label>
+              ))}
+            </div>
           </div>
 
-          <div className="flex items-start space-x-4">
-            <FaEnvelope className="text-[#8E6B3E] text-xl mt-1" />
-            <p className="text-gray-800">hello@yourphotography.com</p>
+          {/* Message */}
+          <textarea
+            name="message"
+            placeholder="Additional Details"
+            value={formData.message}
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 focus:outline-none"
+            rows="4"
+          ></textarea>
+
+          {/* Submit */}
+          <button
+            type="submit"
+            className="w-full p-3 bg-[#8E6B3E] text-white font-semibold uppercase hover:bg-[#7a592d]"
+          >
+            Send via WhatsApp
+          </button>
+        </form>
+
+        {/* Contact Info Below Form */}
+        <div className="mt-10 border-t border-gray-300 pt-6">
+          <h3 className="text-xl font-semibold mb-4">Contact Details</h3>
+
+          {/* Address */}
+          <div className="flex items-center mb-3">
+            <FaMapMarkerAlt className="text-[#8E6B3E] mr-3" />
+            <p>123 Wedding Lane, Guwahati, Assam, India</p>
+          </div>
+
+          {/* Phone */}
+          <div className="flex items-center mb-3">
+            <FaPhoneAlt className="text-[#8E6B3E] mr-3" />
+            <p>+91 98765 43210</p>
+          </div>
+
+          {/* Email */}
+          <div className="flex items-center mb-3">
+            <FaEnvelope className="text-[#8E6B3E] mr-3" />
+            <p>info@framesandfilms.co</p>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex gap-4 mt-4 text-2xl text-[#8E6B3E]">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebook />
+            </a>
+            <a href={`https://wa.me/919876543210`} target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp />
+            </a>
           </div>
         </div>
       </div>

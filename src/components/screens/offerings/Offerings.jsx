@@ -55,6 +55,7 @@ export default function Offerings() {
   return (
     <>
       <section className="bg-[#eae1cf] text-black">
+        <OurProcess />
         {/* Hero Banner */}
         <div
           className="relative w-full h-[60vh] bg-cover bg-center flex items-center justify-center text-white mb-16"
@@ -130,7 +131,7 @@ export default function Offerings() {
         </div>
       </section>
 
-      <OurProcess />
+      
       <FAQSection />
     </>
   );
