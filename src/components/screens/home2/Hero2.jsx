@@ -4,7 +4,7 @@ import "./Hero2.css";
 
 export default function Hero2() {
   return (
-    <div className="relative w-full h-[120vh] overflow-hidden">
+    <div className="relative w-full h-[100vh] overflow-hidden">
       <img
         src={bgImage}
         alt="Wedding Hero"
@@ -16,7 +16,7 @@ export default function Hero2() {
 
       {/* Text Overlay */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <h1 className="font-monsieur text-white text-5xl md:text-8xl text-center px-4 drop-shadow-lg animate-float-breathe">
+        <h1 className="font-tangerine text-white text-5xl md:text-8xl text-center px-4 drop-shadow-lg animate-float-breathe">
           "Two souls, one journey, endless love."
         </h1>
       </div>
