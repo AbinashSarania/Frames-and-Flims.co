@@ -4,7 +4,7 @@ import "./Hero2.css";
 
 export default function Hero2() {
   return (
-    <div className="relative w-full h-[100vh] overflow-hidden">
+    <div className="relative w-full h-[80vh] md:h-[80vh] overflow-hidden">
       <img
         src={bgImage}
         alt="Wedding Hero"
